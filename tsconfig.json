@@ -1,0 +1,28 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "incremental": true,
+        "lib": ["es2022"],
+        "module": "es2020",
+        "moduleDetection": "force",
+        "moduleResolution": "bundler",
+        "noUncheckedIndexedAccess": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "es6",
+        "types": ["node"],
+        "outDir": "./dist",
+        "rootDir": "./packages",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["packages/*"]
+        }
+    },
+    "include": ["packages/**/*", "vitest.config.ts"],
+    "exclude": ["tests", "dist"]
+}

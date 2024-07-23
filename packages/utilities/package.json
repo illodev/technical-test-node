@@ -1,0 +1,20 @@
+{
+    "name": "@monorepo/utilities",
+    "version": "1.0.0",
+    "license": "MIT",
+    "private": true,
+    "exports": {
+        "./auth": "./src/auth.ts",
+        "./file": "./src/file.ts"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "typescript": "^5.5.3"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "@monorepo/services",
+    "version": "1.0.0",
+    "license": "MIT",
+    "private": true,
+    "exports": {
+        "./auth.service": "./src/auth.service.ts",
+        "./user.service": "./src/user.service.ts",
+        "./post.service": "./src/post.service.ts",
+        "./user-image.service": "./src/user-image.service.ts"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@monorepo/schemas": "*",
+        "@monorepo/utilities": "*",
+        "@monorepo/database": "*"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.3"
+    }
+}

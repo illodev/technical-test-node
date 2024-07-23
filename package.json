@@ -1,0 +1,30 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "start": "yarn workspace @monorepo/api start",
+    "dev": "yarn workspace @monorepo/api dev",
+    "test": "yarn workspaces run test",
+    "lint": "yarn workspaces run lint",
+    "prettier": "prettier --write --ignore-unknown packages/**/*.{ts,js,json,md}",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "tsc:check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-unicorn": "^54.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^2.0.3"
+  }
+}
