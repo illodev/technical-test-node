@@ -45,15 +45,7 @@ const authMiddleware = async (
                 });
             }
         }
-    } catch (err: unknown) {
-        if (err instanceof Error) {
-            return reply.code(401).send({
-                statusCode: 401,
-                error: "Unauthorized",
-                message: "You need to be logged in to access this resource."
-            });
-        }
-
+    } catch (err) {
         return reply.code(401).send({
             statusCode: 401,
             error: "Unauthorized",
